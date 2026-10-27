@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLEXICA3 Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h2>FLEXICA3</h2>
+      <span>Lost & Found Board</span>
+    </div>
+  </header>
+
+  <main>
+    <form id="form" class="notice-form">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select id="type" required>
+          <option value="Lost">I lost something</option>
+          <option value="Found">I found something</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Item</label>
+        <input id="name" placeholder="Item (e.g. Black wallet)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input id="location" placeholder="Where? (e.g. Library, Canteen)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact</label>
+        <input id="contact" placeholder="Contact (phone / email)" required>
+      </div>
+
+      <div class="form-group full">
+        <label for="description">Description</label>
+        <textarea id="description" rows="3" placeholder="Description (colour, brand, marks...)"></textarea>
+      </div>
+
+      <button class="btn-submit full" type="submit">Post</button>
+    </form>
+
+    <div class="filters">
+      <button data-f="All" class="active">All</button>
+      <button data-f="Lost">Lost</button>
+      <button data-f="Found">Found</button>
+    </div>
+
+    <div id="list"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
